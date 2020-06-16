@@ -12,7 +12,6 @@ class TableDataContainer extends Component {
 
 	componentDidMount() {
 		this.useInterval();
-		// this.props.getTableData(20);
 	}
 
 	useInterval = () => {

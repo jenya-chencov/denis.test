@@ -27,7 +27,6 @@ const tableReducer = (state = initialState, action) => {
 					return {
 						index: el.index,
 						value: parseInt(el.stocks["CAC40"].toExponential(3)),
-						// timestamp: parseInt(moment(el.timestamp).format('DD'))
 						timestamp: index1
 					}
 				}),
@@ -36,7 +35,6 @@ const tableReducer = (state = initialState, action) => {
 					return {
 						index: el.index,
 						value: parseInt(el.stocks["NASDAQ"].toExponential(3)),
-						// timestamp: parseInt(moment(el.timestamp).format('DD'))
 						timestamp: index2
 					}
 				})
