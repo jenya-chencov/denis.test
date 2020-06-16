@@ -10,6 +10,7 @@ class Chart extends Component {
 			return {
 				id: el,
 				data: tableData[el].map(item => {
+					console.log(item.value);
 					return {
 						x: item.timestamp,
 						y: item.value === '' ? 0 : item.value
@@ -26,8 +27,7 @@ class Chart extends Component {
 					data={data}
 					margin={{top: 50, right: 110, bottom: 50, left: 60}}
 					xScale={{type: 'point'}}
-					yScale={{type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false}}
-					curve="basis"
+					yScale={{type: 'linear', min: 0, max: 'auto', stacked: false, reverse: false}}
 					axisTop={null}
 					axisRight={null}
 					axisBottom={{
@@ -50,7 +50,7 @@ class Chart extends Component {
 					}}
 					colors={["#eb7d3c","#5e9cd3"]}
 					lineWidth={4}
-					enableGridX={false}
+					enableGridY={false}
 					enablePoints={false}
 					pointSize={10}
 					pointColor={{theme: 'background'}}
@@ -58,7 +58,7 @@ class Chart extends Component {
 					pointBorderColor={{from: 'serieColor'}}
 					pointLabel="y"
 					enableSlices="x"
-					pointLabelYOffset={-12}
+					pointLabelYOffset={0}
 					useMesh={true}
 					legends={[
 						{
