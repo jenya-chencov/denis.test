@@ -1,0 +1,15 @@
+.mainTable {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 14px;
+	td {
+		border: 2px solid #cecece;
+		width: 50px;
+		max-width: 50px;
+
+		input {
+			width: 100%;
+			box-sizing: border-box;
+		}
+	}
+}
