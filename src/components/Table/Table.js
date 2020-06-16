@@ -50,7 +50,7 @@ class Table extends Component {
 			return (
 				<td key={cell.index} onDoubleClick={(event) => this.activateEditMode(event, el, cell.index)}>
 					{editMode && index === cell.index && type === el && (
-						<input type="text" autoFocus={true} onBlur={this.deactivateEditMode} onChange={this.onValueChange}
+						<input type="number" autoFocus={true} onBlur={this.deactivateEditMode} onChange={this.onValueChange}
 							   value={cell.value}/>
 					)
 					}
