@@ -12,7 +12,7 @@ class Chart extends Component {
 				data: tableData[el].map(item => {
 					return {
 						x: item.timestamp,
-						y: item.value
+						y: item.value === '' ? 0 : item.value
 					}
 				})
 			}

@@ -29,7 +29,8 @@ class Table extends Component {
 
 	onValueChange = (event) => {
 		const {index, type} = this.state;
-		this.props.changeTableValue(type, index, +event.currentTarget.value);
+		let value = event.currentTarget.value;
+		this.props.changeTableValue(type, index, value);
 	};
 
 	buildRows = () => {
@@ -49,7 +50,7 @@ class Table extends Component {
 			return (
 				<td key={cell.index} onDoubleClick={(event) => this.activateEditMode(event, el, cell.index)}>
 					{editMode && index === cell.index && type === el && (
-						<input type="number" autoFocus={true} onBlur={this.deactivateEditMode} onChange={this.onValueChange}
+						<input type="text" autoFocus={true} onBlur={this.deactivateEditMode} onChange={this.onValueChange}
 							   value={cell.value}/>
 					)
 					}
