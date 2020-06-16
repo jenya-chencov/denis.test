@@ -55,7 +55,7 @@ class Table extends Component {
 					)
 					}
 					{editMode && index === cell.index && type === el ?
-						null : (<span>{cell.value}</span>)
+						null : (<span>{cell.value === '' ? 0 : cell.value}</span>)
 					}
 				</td>
 			)
